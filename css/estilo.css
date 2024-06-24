@@ -1,0 +1,257 @@
+:root{
+    --color-insti-1: #90b51b;
+    --color-insti-2: #d7170f;
+    --color-insti-3: #fab900;
+}
+
+#divConsulta{
+    display: none;
+    flex-direction: column;
+    /* background-color: var(--color-insti-3); */
+    border-radius: 10px;
+    margin: 4%;
+    padding: 4%;
+    border: 2px solid var(--color-insti-3);
+}
+
+.tablaMovim{
+    /* max-width: 50%; */
+    max-height: 200%;
+    overflow: scroll !important;
+}
+
+.inputLog{
+    margin-left: 0px !important;
+    max-width: 65%;
+    /*border-radius: 0% 2% 50% 0%;*/
+}
+
+#loginDiv{
+    position: relative;
+    background-color: var(--color-insti-1);
+    box-shadow: gray 1px 10px 12px 1px;
+    min-height: 40vh;
+
+    margin-top: 30vh;
+    margin-right: 2%;
+    margin-left: 0px !important;
+
+    padding-left: 0px !important;
+    padding-top: 15%;
+	padding-bottom: 5%;
+    border-radius: 0px 200px 200px 0px;
+}
+
+#loginDiv h1{
+    text-align: center !important;
+    margin-bottom: 10%;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    color: white;
+    
+}
+
+#txtcontra{
+    border-radius: 0px 2px 80px 0px;
+}
+
+#txtusuario{
+    border-radius: 0px 80px 2px 0px;
+}
+
+#btnLogin{
+    position: absolute;
+    /*top: 47%;*/
+    left: 56%;
+    background-color: var(--color-insti-2);
+    border-color: var(--color-insti-2);
+    color: white;
+    border-radius: 100%;
+	margin-top: -5%;
+}
+
+.spanError {
+    position: absolute;
+    top:39%;
+    color: brown;
+}
+
+#bola1 {
+    position: fixed;
+    height: 160px;
+    width: 160px;
+    background: var(--color-insti-3);
+    margin-left: 0px;
+    border-radius: 200px;
+    left: -70px;
+    top: -50px;
+    z-index: -1;
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); */
+}
+
+#bola2 {
+    position: fixed;
+    height: 110px;
+    width: 110px;
+    background: var(--color-insti-3);
+    margin-left: 0px;
+    border-radius: 200px;
+    left: 40px;
+    top: -60px;
+    z-index: -1;
+    /* box-shadow: 5px 5px 10px rgb(181, 179, 179); */
+}
+
+#bola3{
+    position: fixed;
+    height: 160px;
+    width: 160px;
+    background: var(--color-insti-2);
+    margin-left: 0px;
+    border-radius: 200px;
+    right: -70px;
+    bottom  : -50px;
+    z-index: -1;
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); */
+}
+
+#bola4{
+    position: fixed;
+    height: 110px;
+    width: 110px;
+    background: var(--color-insti-2);
+    margin-left: 0px;
+    border-radius: 200px;
+    right: 40px;
+    bottom  : -67px;
+    z-index: -1;
+    /* box-shadow: 5px 5px 10px rgb(181, 179, 179); */
+}
+/*
+#loginDiv div form div{
+    height: 62px;
+}*/
+
+#pFechaCon{
+    margin-bottom: 0px;
+}
+
+#divCerrarSe form input{
+    margin-left: 30%;
+}
+
+.divRow{
+    margin-top: 2vh;
+}
+
+.divRow input{
+    margin-bottom: 2vh;
+}
+
+.divBusqueda{
+    background-color: var(--color-insti-1);
+    border-radius: 10px 40px;
+    padding: 25px;
+    margin: 25px;
+    color: white;
+}
+
+#hConsulta{
+    position: absolute;
+    font-size: 10px;
+    right: 11%;
+    margin-bottom: -5%;
+}
+
+#btnConteo{
+    background-color: var(--color-insti-2);
+}
+
+.btnDetalle{
+    background-color: var(--color-insti-1);
+    margin-bottom: 2vh;
+}
+
+/* * {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} */
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+/* body {
+	background: var(--bg);
+	color: var(--fg);
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+} */
+
+.pl {
+	display: none;
+    width: 6.25em;
+    height: 6.25em;
+    position: fixed;
+    top: 50vh;
+    left: 35vw;
+	z-index: -99;
+}
+.pl__ring, .pl__ball {
+	animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+	animation-name: ball;
+}
+
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+}
+
+/* Animation */
+@keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+@keyframes ball {
+	from, 50% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
+
+.tdFechaHora{
+	min-width: 101.45833999999999px !important;
+}
